@@ -67,7 +67,13 @@ public class ProblemSet3 {
      */
 
     public void parity() {
-
+      System.out.print("Enter an integer: ");
+      int integer2 = in.nextInt();
+      if ((integer2 % 2) == 0) {
+        System.out.println("\nEven.");
+      } else {
+        System.out.println("\nOdd.");
+      }
     }
 
     /*
