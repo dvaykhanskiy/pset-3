@@ -28,10 +28,10 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
-        ps.ordered();       // executes Exercise 3
-        ps.gpa();           // executes Exercise 4
+        // ps.sign();          // executes Exercise 1
+        // ps.parity();        // executes Exercise 2
+        // ps.ordered();       // executes Exercise 3
+        // ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
@@ -50,10 +50,11 @@ public class ProblemSet3 {
 
     public void sign() {
       System.out.print("Enter an integer: ");
-      int integer1 = in.nextInt();
-      if (integer1 > 0) {
+      int int1 = in.nextInt();
+
+      if (int1 > 0) {
         System.out.println("\nPositive.");
-      } else if (integer1 < 0) {
+      } else if (int1 < 0) {
         System.out.println("\nNegative.");
       } else {
         System.out.println("\nZero.");
@@ -68,8 +69,9 @@ public class ProblemSet3 {
 
     public void parity() {
       System.out.print("Enter an integer: ");
-      int integer2 = in.nextInt();
-      if ((integer2 % 2) == 0) {
+      int int2 = in.nextInt();
+
+      if ((int2 % 2) == 0) {
         System.out.println("\nEven.");
       } else {
         System.out.println("\nOdd.");
@@ -83,7 +85,27 @@ public class ProblemSet3 {
      */
 
     public void ordered() {
+      System.out.println("Enter 3 integers:\n");
+      System.out.print("Enter integer: ");
+      int int3_1 = in.nextInt();
+      System.out.print("Enter integer: ");
+      int int3_2 = in.nextInt();
+      System.out.print("Enter integer: ");
+      int int3_3 = in.nextInt();
 
+      if ((int3_2 > int3_1) && (int3_3 > int3_2)) {
+        System.out.println("Strictly increasing.");
+      } else if ((int3_2 == int3_1) && (int3_3 == int3_2)) {
+        System.out.println("Same.");
+      } else if ((int3_2 >= int3_1) && (int3_3 >= int3_2)) {
+        System.out.println("Increasing.");
+      } else if ((int3_2 < int3_1) && (int3_3 < int3_2)) {
+        System.out.println("Strictly decreasing.");
+      } else if ((int3_2 <= int3_1) && (int3_3 <= int3_2)) {
+        System.out.println("Decreasing.");
+      } else {
+        System.out.println("Unordered.");
+      }
     }
 
     /*
@@ -93,7 +115,72 @@ public class ProblemSet3 {
      */
 
     public void gpa() {
+      System.out.print("Enter a letter grade: ");
+      String letterGrade = in.nextLine();
+      final double A_VALUE = 4.0;
+      final double B_VALUE = 3.0;
+      final double C_VALUE = 2.0;
+      final double D_VALUE = 1.0;
+      final double F_VALUE = 0.0;
+      double gpaValue;
 
+      switch  (letterGrade) {
+        case "A+":
+          gpaValue = A_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "A":
+          gpaValue = A_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "A-":
+          gpaValue = A_VALUE - .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "B+":
+          gpaValue = B_VALUE + .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "B":
+          gpaValue = B_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "B-":
+          gpaValue = B_VALUE - .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "C+":
+          gpaValue = C_VALUE + .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "C":
+          gpaValue = C_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "C-":
+          gpaValue = C_VALUE - .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "D+":
+          gpaValue = D_VALUE + .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "D":
+          gpaValue = D_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "D-":
+          gpaValue = D_VALUE - .33;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        case "F":
+          gpaValue = F_VALUE;
+          System.out.printf("Your GPA is %.2f.", gpaValue);
+          break;
+        default:
+          System.out.println("That's not a valid letter grade.");
+          break;
+      }
     }
 
     /*
