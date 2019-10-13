@@ -28,13 +28,13 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        // ps.sign();          // executes Exercise 1
-        // ps.parity();        // executes Exercise 2
-        // ps.ordered();       // executes Exercise 3
-        // ps.gpa();           // executes Exercise 4
-        // ps.grade();         // executes Exercise 5
-        // ps.cards();         // executes Exercise 6
-        // ps.leapYear();      // executes Exercise 7
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
+        ps.ordered();       // executes Exercise 3
+        ps.gpa();           // executes Exercise 4
+        ps.grade();         // executes Exercise 5
+        ps.cards();         // executes Exercise 6
+        ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -53,11 +53,11 @@ public class ProblemSet3 {
       int int1 = in.nextInt();
 
       if (int1 > 0) {
-        System.out.println("\nPositive.");
+        System.out.println("\nPositive.\n");
       } else if (int1 < 0) {
-        System.out.println("\nNegative.");
+        System.out.println("\nNegative.\n");
       } else {
-        System.out.println("\nZero.");
+        System.out.println("\nZero.\n");
       }
     }
 
@@ -72,9 +72,9 @@ public class ProblemSet3 {
       int int2 = in.nextInt();
 
       if ((int2 % 2) == 0) {
-        System.out.println("\nEven.");
+        System.out.println("\nEven.\n");
       } else {
-        System.out.println("\nOdd.");
+        System.out.println("\nOdd.\n");
       }
     }
 
@@ -94,17 +94,17 @@ public class ProblemSet3 {
       int int3_3 = in.nextInt();
 
       if ((int3_2 > int3_1) && (int3_3 > int3_2)) {
-        System.out.println("Strictly increasing.");
+        System.out.println("\nStrictly increasing.\n");
       } else if ((int3_2 == int3_1) && (int3_3 == int3_2)) {
-        System.out.println("Same.");
+        System.out.println("\nSame.\n");
       } else if ((int3_2 >= int3_1) && (int3_3 >= int3_2)) {
-        System.out.println("Increasing.");
+        System.out.println("\nIncreasing.\n");
       } else if ((int3_2 < int3_1) && (int3_3 < int3_2)) {
-        System.out.println("Strictly decreasing.");
+        System.out.println("\nStrictly decreasing.\n");
       } else if ((int3_2 <= int3_1) && (int3_3 <= int3_2)) {
-        System.out.println("Decreasing.");
+        System.out.println("\nDecreasing.\n");
       } else {
-        System.out.println("Unordered.");
+        System.out.println("\nUnordered.\n");
       }
     }
 
@@ -116,8 +116,8 @@ public class ProblemSet3 {
 
     public void gpa() {
       System.out.print("Enter a letter grade: ");
-      String letterGrade = in.nextLine();
-      letterGrade = letterGrade.toUpperCase();
+      in.nextLine();
+      String letterGrade = in.nextLine().toUpperCase();
       final double A_VALUE = 4.0;
       final double B_VALUE = 3.0;
       final double C_VALUE = 2.0;
@@ -129,58 +129,58 @@ public class ProblemSet3 {
       switch  (letterGrade) {
         case "A+":
           gpaValue = A_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "A":
           gpaValue = A_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "A-":
           gpaValue = A_VALUE - GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "B+":
           gpaValue = B_VALUE + GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "B":
           gpaValue = B_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "B-":
           gpaValue = B_VALUE - GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "C+":
           gpaValue = C_VALUE + GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "C":
           gpaValue = C_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "C-":
           gpaValue = C_VALUE - GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "D+":
           gpaValue = D_VALUE + GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "D":
           gpaValue = D_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "D-":
           gpaValue = D_VALUE - GPA_ADJUST;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         case "F":
           gpaValue = F_VALUE;
-          System.out.printf("Your GPA is %.2f.", gpaValue);
+          System.out.printf("\nYour GPA is %.2f.\n", gpaValue);
           break;
         default:
-          System.out.println("That's not a valid letter grade.");
+          System.out.println("\nThat's not a valid letter grade.\n");
           break;
       }
     }
@@ -192,7 +192,7 @@ public class ProblemSet3 {
      */
 
     public void grade() {
-      System.out.print("Enter a grade: ");
+      System.out.print("\nEnter a grade: ");
       double numberGrade = in.nextDouble();
       final double A_MAX = 100;
       final double A_MIN = 90;
@@ -201,19 +201,19 @@ public class ProblemSet3 {
       final double D_MIN = 60;
       final double F_MIN = 0;
       if (numberGrade >= A_MIN && numberGrade <= A_MAX) {
-        System.out.println("You receive an A.");
+        System.out.println("\nYou receive an A.\n");
       } else if (numberGrade >= B_MIN && numberGrade <= A_MIN) {
-        System.out.println("You receive a B.");
+        System.out.println("\nYou receive a B.\n");
       } else if (numberGrade >= C_MIN && numberGrade <= B_MIN) {
-        System.out.println("You receive a C.");
+        System.out.println("\nYou receive a C.\n");
       } else if (numberGrade >= D_MIN && numberGrade <= C_MIN) {
-        System.out.println("You receive a D.");
+        System.out.println("\nYou receive a D.\n");
       } else if (numberGrade >= F_MIN && numberGrade <= D_MIN) {
-        System.out.println("You receive a F.");
+        System.out.println("\nYou receive a F.\n");
       } else if (numberGrade > 100) {
-        System.out.println("Grades above 100 are invalid.");
+        System.out.println("\nGrades above 100 are invalid.\n");
       } else if (numberGrade < 0) {
-        System.out.println("Grades below 0 are invalid.");
+        System.out.println("\nGrades below 0 are invalid.\n");
       }
     }
 
@@ -225,10 +225,10 @@ public class ProblemSet3 {
 
     public void cards() {
       System.out.print("Enter a card: ");
-      String cardName = in.nextLine();
-      cardName = cardName.toUpperCase();
-      String cardRank = cardName.substring(0, 1);
+      in.nextLine();
+      String cardName = in.nextLine().toUpperCase();
       String cardSuit = cardName.substring(1);
+      String cardRank = cardName.substring(0, 1);
 
       switch (cardRank) {
         case "2":
@@ -294,11 +294,11 @@ public class ProblemSet3 {
       }
 
       if (cardRank == "Invalid") {
-        System.out.println("That's not a valid rank.");
+        System.out.println("\nThat's not a valid rank.\n");
       } else if (cardSuit == "Invalid" || cardName.length() != 2) {
-        System.out.println("That's not a valid suit.");
+        System.out.println("\nThat's not a valid suit.\n");
       } else {
-        System.out.println(cardRank + " of " + cardSuit + ".");
+        System.out.println("\n" + cardRank + " of " + cardSuit + ".");
       }
     }
 
@@ -309,12 +309,12 @@ public class ProblemSet3 {
      */
 
     public void leapYear() {
-      System.out.print("Enter a year: ");
+      System.out.print("\nEnter a year: ");
       long year = in.nextLong();
       if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-        System.out.println(year + " is a leap year.\n");
+        System.out.println("\n" + year + " is a leap year.\n");
       } else {
-        System.out.println(year + " is not a leap year.\n");
+        System.out.println("\n" + year + " is not a leap year.\n");
       }
     }
 
@@ -334,22 +334,22 @@ public class ProblemSet3 {
 
       if (scale.equals("F") || scale.equals("f")) {
         if (temp <= 32) {
-          System.out.println("Solid.");
+          System.out.println("\nSolid.\n");
         } else if (temp < 212) {
-          System.out.println("Liquid.");
+          System.out.println("\nLiquid.\n");
         } else {
-          System.out.println("Gas.");
+          System.out.println("\nGas.\n");
         }
       } else if (scale.equals("C") || scale.equals("c")) {
           if (temp <= 0) {
-            System.out.println("Solid.");
+            System.out.println("\nSolid.\n");
           } else if (temp < 100) {
-            System.out.println("Liquid.");
+            System.out.println("\nLiquid.\n");
           } else {
-            System.out.println("Gas.");
+            System.out.println("\nGas.\n");
         }
       } else {
-        System.out.println("That's not a valid scale.");
+        System.out.println("\nThat's not a valid scale.\n");
       }
     }
 
@@ -426,7 +426,6 @@ public class ProblemSet3 {
             break;
         }
     }
-    }
 
     /*
      * Exercise 10.
@@ -435,6 +434,18 @@ public class ProblemSet3 {
      */
 
     public void salary() {
+      System.out.print("Wage: ");
+      double wage = in.nextDouble();
+      System.out.print("Hours: ");
+      double hours = in.nextDouble();
+      final double REG_HOURS = 40;
+      final double OVERTIME_MULTIPLIER = 0.5;
 
+      double salary = wage * hours;
+      if (hours > REG_HOURS) {
+        salary += (hours - REG_HOURS) * wage * OVERTIME_MULTIPLIER;
+      }
+
+      System.out.printf("\nYou'll make $%,.2f this week.\n\n", salary);
     }
 }
