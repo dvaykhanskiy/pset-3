@@ -32,7 +32,7 @@ public class ProblemSet3 {
         // ps.parity();        // executes Exercise 2
         // ps.ordered();       // executes Exercise 3
         // ps.gpa();           // executes Exercise 4
-        ps.grade();         // executes Exercise 5
+        // ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
@@ -190,7 +190,29 @@ public class ProblemSet3 {
      */
 
     public void grade() {
-
+      System.out.print("Enter a grade: ");
+      double numberGrade = in.nextDouble();
+      final double A_MAX = 100;
+      final double A_MIN = 90;
+      final double B_MIN = 80;
+      final double C_MIN = 70;
+      final double D_MIN = 60;
+      final double F_MIN = 0;
+      if (numberGrade >= A_MIN && numberGrade <= A_MAX) {
+        System.out.println("You receive an A.");
+      } else if (numberGrade >= B_MIN && numberGrade <= A_MIN) {
+        System.out.println("You receive a B.");
+      } else if (numberGrade >= C_MIN && numberGrade <= B_MIN) {
+        System.out.println("You receive a C.");
+      } else if (numberGrade >= D_MIN && numberGrade <= C_MIN) {
+        System.out.println("You receive a D.");
+      } else if (numberGrade >= F_MIN && numberGrade <= D_MIN) {
+        System.out.println("You receive a F.");
+      } else if (numberGrade > 100) {
+        System.out.println("Grades above 100 are invalid.");
+      } else if (numberGrade < 0) {
+        System.out.println("Grades below 0 are invalid.");
+      }
     }
 
     /*
@@ -200,7 +222,82 @@ public class ProblemSet3 {
      */
 
     public void cards() {
+      System.out.print("Enter a card: ");
+      String cardName = in.nextLine();
+      cardName = cardName.toUpperCase();
+      String cardRank = cardName.substring(0, 1);
+      String cardSuit = cardName.substring(1);
 
+      switch (cardRank) {
+        case "2":
+          cardRank = "Two";
+          break;
+        case "3":
+          cardRank = "Three";
+          break;
+        case "4":
+          cardRank = "Four";
+          break;
+        case "5":
+          cardRank = "Five";
+          break;
+        case "6":
+          cardRank = "Six";
+          break;
+        case "7":
+          cardRank = "Seven";
+          break;
+        case "8":
+          cardRank = "Eight";
+          break;
+        case "9":
+          cardRank = "Nine";
+          break;
+        case "T":
+          cardRank = "Ten";
+          break;
+        case "J":
+          cardRank = "Jack";
+          break;
+        case "Q":
+          cardRank = "Queen";
+          break;
+        case "K":
+          cardRank = "Kind";
+          break;
+        case "A":
+          cardRank = "Ace";
+          break;
+        default:
+          cardRank = "Invalid";
+          break;
+      }
+
+      switch (cardSuit) {
+        case "C":
+          cardSuit = "Clubs";
+          break;
+        case "H":
+          cardSuit = "Hearts";
+          break;
+        case "D":
+          cardSuit = "Diamonds";
+          break;
+        case "S":
+          cardSuit = "Spades";
+          break;
+        default:
+          cardSuit = "Invalid";
+          break;
+      }
+
+      if (cardRank == "Invalid") {
+        System.out.println("That's not a valid rank.");
+      } else if (cardSuit == "Invalid") {
+        System.out.println("That's not a valid suit.");
+      } else {
+        System.out.println(cardRank + " of " + cardSuit + ".");
+      }
     }
 
     /*
