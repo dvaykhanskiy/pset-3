@@ -33,8 +33,8 @@ public class ProblemSet3 {
         // ps.ordered();       // executes Exercise 3
         // ps.gpa();           // executes Exercise 4
         // ps.grade();         // executes Exercise 5
-        ps.cards();         // executes Exercise 6
-        ps.leapYear();      // executes Exercise 7
+        // ps.cards();         // executes Exercise 6
+        // ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -310,11 +310,11 @@ public class ProblemSet3 {
 
     public void leapYear() {
       System.out.print("Enter a year: ");
-      double year = in.nextDouble();
-      if ((year % 4) == 0) {
-        System.out.printf("%.0f is a leap year.\n", year);
+      long year = in.nextLong();
+      if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        System.out.println(year + " is a leap year.\n");
       } else {
-        System.out.printf("%.0f is not a leap year.\n", year);
+        System.out.println(year + " is not a leap year.\n");
       }
     }
 
@@ -326,7 +326,31 @@ public class ProblemSet3 {
      */
 
     public void state() {
+      System.out.print("Enter a temperature: ");
+      double temp = in.nextDouble();
+      System.out.print("Enter a scale: ");
+      in.nextLine();
+      String scale = in.nextLine().toUpperCase();
 
+      if (scale.equals("F") || scale.equals("f")) {
+        if (temp <= 32) {
+          System.out.println("Solid.");
+        } else if (temp < 212) {
+          System.out.println("Liquid.");
+        } else {
+          System.out.println("Gas.");
+        }
+      } else if (scale.equals("C") || scale.equals("c")) {
+          if (temp <= 0) {
+            System.out.println("Solid.");
+          } else if (temp < 100) {
+            System.out.println("Liquid.");
+          } else {
+            System.out.println("Gas.");
+        }
+      } else {
+        System.out.println("That's not a valid scale.");
+      }
     }
 
     /*
@@ -336,7 +360,72 @@ public class ProblemSet3 {
      */
 
     public void months() {
-
+      System.out.print("Enter a month: ");
+        String userMonth = in.nextLine();
+        userMonth = userMonth.toUpperCase();
+        //28 or 29 days. 30 days. 31 days. That's not a valid month.
+        switch (userMonth) {
+          case "JANUARY":
+          case "JANU":
+          case "JAN":
+            System.out.println("\n31 days.\n");
+            break;
+          case "FEBRUARY":
+          case "FEBR":
+          case "FEB":
+            System.out.println("\n28 or 29 days.\n");
+            break;
+          case "MARCH":
+          case "MARC":
+          case "MAR":
+            System.out.println("\n31 days.\n");
+            break;
+          case "APRIL":
+          case "APRI":
+          case "APR":
+            System.out.println("\n30 days.\n");
+            break;
+          case "MAY":
+            System.out.println("\n31 days.\n");
+            break;
+          case "JUNE":
+          case "JUN":
+            System.out.println("\n30 days.\n");
+            break;
+          case "JULY":
+          case "JUL":
+            System.out.println("\n31 days.\n");
+            break;
+          case "AUGUST":
+          case "AUGU":
+          case "AUG":
+            System.out.println("\n31 days.\n");
+            break;
+          case "SEPTEMBER":
+          case "SEPT":
+          case "SEP":
+            System.out.println("\n30 days.\n");
+            break;
+          case "OCTOBER":
+          case "OCTO":
+          case "OCT":
+            System.out.println("\n31 days.\n");
+            break;
+          case "NOVEMBER":
+          case "NOVE":
+          case "NOV":
+            System.out.println("\n30 days.\n");
+            break;
+          case "DECEMBER":
+          case "DECE":
+          case "DEC":
+            System.out.println("\n31 days.\n");
+            break;
+          default:
+            System.out.println("\nThat's not a valid month.\n");
+            break;
+        }
+    }
     }
 
     /*
