@@ -117,12 +117,14 @@ public class ProblemSet3 {
     public void gpa() {
       System.out.print("Enter a letter grade: ");
       String letterGrade = in.nextLine();
+      letterGrade = letterGrade.toUpperCase();
       final double A_VALUE = 4.0;
       final double B_VALUE = 3.0;
       final double C_VALUE = 2.0;
       final double D_VALUE = 1.0;
       final double F_VALUE = 0.0;
       double gpaValue;
+      final double GPA_ADJUST = 0.33;
 
       switch  (letterGrade) {
         case "A+":
@@ -134,11 +136,11 @@ public class ProblemSet3 {
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "A-":
-          gpaValue = A_VALUE - .33;
+          gpaValue = A_VALUE - GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "B+":
-          gpaValue = B_VALUE + .33;
+          gpaValue = B_VALUE + GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "B":
@@ -146,11 +148,11 @@ public class ProblemSet3 {
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "B-":
-          gpaValue = B_VALUE - .33;
+          gpaValue = B_VALUE - GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "C+":
-          gpaValue = C_VALUE + .33;
+          gpaValue = C_VALUE + GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "C":
@@ -158,11 +160,11 @@ public class ProblemSet3 {
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "C-":
-          gpaValue = C_VALUE - .33;
+          gpaValue = C_VALUE - GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "D+":
-          gpaValue = D_VALUE + .33;
+          gpaValue = D_VALUE + GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "D":
@@ -170,7 +172,7 @@ public class ProblemSet3 {
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "D-":
-          gpaValue = D_VALUE - .33;
+          gpaValue = D_VALUE - GPA_ADJUST;
           System.out.printf("Your GPA is %.2f.", gpaValue);
           break;
         case "F":
@@ -293,7 +295,7 @@ public class ProblemSet3 {
 
       if (cardRank == "Invalid") {
         System.out.println("That's not a valid rank.");
-      } else if (cardSuit == "Invalid") {
+      } else if (cardSuit == "Invalid" || cardName.length() != 2) {
         System.out.println("That's not a valid suit.");
       } else {
         System.out.println(cardRank + " of " + cardSuit + ".");
@@ -307,7 +309,13 @@ public class ProblemSet3 {
      */
 
     public void leapYear() {
-
+      System.out.print("Enter a year: ");
+      double year = in.nextDouble();
+      if ((year % 4) == 0) {
+        System.out.printf("%.0f is a leap year.\n", year);
+      } else {
+        System.out.printf("%.0f is not a leap year.\n", year);
+      }
     }
 
     /*
